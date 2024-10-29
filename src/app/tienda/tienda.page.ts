@@ -2,18 +2,18 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-tienda',
+  templateUrl: './tienda.page.html',
+  styleUrls: ['./tienda.page.scss'],
 })
-export class AppComponent {
+export class TiendaPage {
 
   constructor(private router: Router) {}
 
   logout() {
     // Elimina el token o datos de sesión si existen
-    localStorage.removeItem('authToken'); // Cambia 'authToken' según el nombre que uses
-    // Redirige al usuario al login
+    localStorage.removeItem('authToken'); // Cambia 'authToken' si es necesario
+    // Redirige al usuario a la página de login
     this.router.navigate(['/login']);
   }
 }
